@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+  <script src="js/main.js"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
 
@@ -18,11 +19,12 @@
 
 <div class="container mainContainer">
   <ul class="pagination">
-    <li><a href="#">Championships</a></li>
-    <li><a href="#">Teams</a></li>
-    <li><a href="#">Matches</a></li>
-    <li><a href="#">About</a></li>
+    <li><a href="#!championships">Championships</a></li>
+    <li><a href="#!teams">Teams</a></li>
+    <li><a href="#!matches">Matches</a></li>
+    <li><a href="#!about">About</a></li>
   </ul>
+  <div ng-view></div>
 </div>
 
 </body>
