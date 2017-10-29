@@ -1,18 +1,6 @@
-  <table class="table table-bordered">
-    <thead> 
-      <tr>
-        <th>Date</th>
-        <th></th>
-        <th>First team</th>
-        <th>Second team</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="match in matches">
-        <td>{{ match.date }}</td>
-        <td><img src="https://footballbet.com.ua/teams/country/{{match.image}}"/></td>
-        <td>{{ match.firstTeam }}</td>
-        <td>{{ match.secondTeam }}</td>
-      </tr>
-    </tbody>
-  </table>
+<ul class="list-group" ng-repeat="match in matches">
+   <li class="list-group-item">
+     <img src="https://footballbet.com.ua/teams/country/{{match.image}}"/>
+     {{ match.firstTeam + '-' + match.secondTeam }}
+   </li>
+</ul>

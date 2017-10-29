@@ -1,16 +1,6 @@
-  <table class="table table-bordered">
-    <thead> 
-      <tr>
-        <th>Id</th>
-        <th></th>
-        <th>Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="team in teams | orderBy:'name'">
-        <td>{{ team.id_teams }}</td>
-        <td><img src="https://footballbet.com.ua/teams/embl/{{team.emblema}}"/></td>
-        <td>{{ team.name }}</td>
-      </tr>
-    </tbody>
-  </table>
+<ul class="list-group" ng-repeat="team in teams">
+   <li class="list-group-item">
+     <img src="https://footballbet.com.ua/teams/embl/{{team.emblema}}"/>
+     {{ team.name }}
+   </li>
+</ul>  

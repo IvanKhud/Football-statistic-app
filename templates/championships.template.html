@@ -1,20 +1,6 @@
-  <table class="table table-bordered">
-    <thead> 
-      <tr>
-        <th>Id</th>
-        <th></th>
-        <th>Country</th>
-        <th>Sename</th>
-        <th>Title</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="championship in championships">
-        <td>{{ championship.id_championship }}</td>
-        <td><img src="https://footballbet.com.ua/table/embl/{{championship.image}}"/></td>
-        <td>{{ championship.name }}</td>
-        <td>{{ championship.sename }}</td>
-        <td>{{ championship.title }}</td>
-      </tr>
-    </tbody>
-  </table>
+<ul class="list-group" ng-repeat="championship in championships">
+   <li class="list-group-item">
+     <img src="https://footballbet.com.ua/table/embl/{{championship.image}}"/>
+     {{ championship.name }}
+   </li>
+</ul>
