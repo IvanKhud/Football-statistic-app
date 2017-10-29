@@ -27,64 +27,7 @@
 </div>   
 
 <div class="container mainContainer">
-
-  <table class="table table-bordered">
-    <thead> 
-      <tr>
-        <th>Id</th>
-        <th></th>
-        <th>Country</th>
-        <th>Sename</th>
-        <th>Title</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="championship in championships">
-        <td>{{ championship.id_championship }}</td>
-        <td><img src="https://footballbet.com.ua/table/embl/{{championship.image}}"/></td>
-        <td>{{ championship.name }}</td>
-        <td>{{ championship.sename }}</td>
-        <td>{{ championship.title }}</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <table class="table table-bordered">
-    <thead> 
-      <tr>
-        <th>Id</th>
-        <th></th>
-        <th>Name</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="team in teams | orderBy:'name'">
-        <td>{{ team.id_teams }}</td>
-        <td><img src="https://footballbet.com.ua/teams/embl/{{team.emblema}}"/></td>
-        <td>{{ team.name }}</td>
-      </tr>
-    </tbody>
-  </table>
-
-  <table class="table table-bordered">
-    <thead> 
-      <tr>
-        <th>Date</th>
-        <th></th>
-        <th>First team</th>
-        <th>Second team</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr ng-repeat="match in matches">
-        <td>{{ match.date }}</td>
-        <td><img src="https://footballbet.com.ua/teams/country/{{match.image}}"/></td>
-        <td>{{ match.firstTeam }}</td>
-        <td>{{ match.secondTeam }}</td>
-      </tr>
-    </tbody>
-  </table>
-
+  <ng-view></ng-view>
 </div>
 
 </body>
