@@ -1,3 +1,8 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
 .container-fluid, .container {
 	text-align: center;
 	background-color: #f7f7f9;
@@ -7,10 +12,15 @@
 }
 
 .container {
-  width: 50%;
+  width: 25%;
 }
 
 .container img {
-	height: 35px;
-	width: 35px;
+  height: 35px;
+  width: 35px;
+}
+
+.list-group-item {
+  padding-top: 0;
+  padding-bottom: 0;
 }
