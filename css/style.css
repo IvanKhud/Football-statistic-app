@@ -9,3 +9,8 @@
 .container {
   width: 50%;
 }
+
+.container img {
+	height: 35px;
+	width: 35px;
+}

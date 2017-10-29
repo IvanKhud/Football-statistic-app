@@ -1,10 +1,13 @@
 var app = angular.module('mainApp', ["ngRoute"]);
 
-app.controller('mainCtrl', function($scope) {
+app.controller('mainCtrl', function($scope, $http) {
+  $http.get("https://footballbet.com.ua/api/championships/")
+  .then(function(response) {
+       $scope.championships = response.data.result;
+   });
+ });
 
-});
-
-app.config(function($routeProvider) {
+/*app.config(function($routeProvider) {
     $routeProvider
     .when("/championships", {
         templateUrl: 'templates/championships.template.html'
@@ -21,4 +24,4 @@ app.config(function($routeProvider) {
     .otherwise({
     	redirectTo: '/championships'
     });
-});
+});*/

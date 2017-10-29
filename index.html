@@ -27,7 +27,27 @@
 </div>   
 
 <div class="container mainContainer">
-  <div ng-view></div>
+
+  <table class="table table-bordered">
+    <thead> 
+      <tr>
+        <th>Id</th>
+        <th>Country</th>
+        <th>Sename</th>
+        <th>Title</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr ng-repeat="x in championships">
+        <td>{{ x.id_championship }}</td>
+        <td><img src="https://footballbet.com.ua/table/embl/{{x.image}}"/></td>
+        <td>{{ x.name }}</td>
+        <td>{{ x.sename }}</td>
+        <td>{{ x.title }}</td>
+      </tr>
+    </tbody>
+  </table>
+
 </div>
 
 </body>
