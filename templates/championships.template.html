@@ -1,6 +1,8 @@
-<ul class="list-group" ng-repeat="championship in championships">
-   <li class="list-group-item">
-     <img src="https://footballbet.com.ua/table/embl/{{championship.image}}"/>
-     {{ championship.name }}
-   </li>
-</ul>
+<div ng-controller="ChampionshipsCtrl as cctrl">
+  <ul class="list-group" ng-repeat="championship in cctrl.championships">
+    <li class="list-group-item">
+      <img src="https://footballbet.com.ua/table/embl/{{championship.image}}"/>
+      {{ championship.name }}
+    </li>
+  </ul>
+</div>

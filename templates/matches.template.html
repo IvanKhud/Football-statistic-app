@@ -1,6 +1,8 @@
-<ul class="list-group" ng-repeat="match in matches">
-   <li class="list-group-item">
-     <img src="https://footballbet.com.ua/teams/country/{{match.image}}"/>
-     {{ match.firstTeam + '-' + match.secondTeam }}
-   </li>
-</ul>
+<div ng-controller="MatchesCtrl as mctrl">
+  <ul class="list-group" ng-repeat="match in mctrl.matches">
+    <li class="list-group-item">
+      <img src="https://footballbet.com.ua/teams/country/{{match.image}}"/>
+      {{ match.firstTeam + '-' + match.secondTeam }}
+    </li>
+  </ul>
+</div>
