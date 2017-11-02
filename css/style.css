@@ -11,8 +11,18 @@
   border-radius: 5px;
 }
 
+.mainContainer {
+  width: 70%;
+}
+
+.table, .form-control {
+  width: 35%;
+  margin: auto;
+}
+
 .navbar-nav {
   margin-top: 20px;
+  margin-left: 15%;
 }
 
 .navbar-nav img {
@@ -24,10 +34,6 @@
 
 .navbar-nav li {
   font-size: 16px;
-}
-
-.container {
-  width: 25%;
 }
 
 .container img {
