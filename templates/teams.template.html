@@ -1,8 +1,12 @@
 <div ng-controller="TeamsCtrl as tctrl">
-  <ul class="list-group" ng-repeat="team in tctrl.teams">
+
+  <ul class="list-group" ng-repeat="team in tctrl.teams.slice(((tctrl.currentPage-1)*tctrl.itemsPerPage), ((tctrl.currentPage)*tctrl.itemsPerPage))">
     <li class="list-group-item">
       <img src="https://footballbet.com.ua/teams/embl/{{team.emblema}}"/>
       {{ team.name }}
     </li>
-  </ul>  
+  </ul>
+
+  <pagination ng-hide="tctrl.totalItems <= 10" total-items="tctrl.totalItems" ng-model="tctrl.currentPage" first-text = "<<" last-text=">>" previous-text="<" next-text=">" max-size="tctrl.maxSize" class="pagination-sm" boundary-links="true" rotate="false" items-per-page="tctrl.itemsPerPage"></pagination>
+
 </div>
