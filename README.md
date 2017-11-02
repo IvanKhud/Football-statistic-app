@@ -1,4 +1,7 @@
-# Football-statistic-app
-"# Football-statistic-app"  This is angularjs application, that takes data from API http://footballbet.com.ua
+Football-statistic-app
 
-#Try this app at http://football-stat-app.herokuapp.com 
+This is angular.js application, that takes data from API http://footballbet.com.ua
+
+Resolved 4 issues: https://github.com/IvanKhud/Football-statistic-app/issues 
+
+Try this app at http://football-stat-app.herokuapp.com 
