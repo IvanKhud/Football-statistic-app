@@ -1,11 +1,11 @@
 <div ng-controller="MatchesCtrl as mctrl">
-
-  <ul class="list-group" ng-repeat="match in mctrl.matches.slice(((mctrl.currentPage-1)*mctrl.itemsPerPage), ((mctrl.currentPage)*mctrl.itemsPerPage))">
-    <li class="list-group-item">
+  <input type="text" ng-model="searchmatch" class="form-control">
+  <table class="table table-bordered" ng-repeat="match in mctrl.matches.slice(((mctrl.currentPage-1)*mctrl.itemsPerPage), ((mctrl.currentPage)*mctrl.itemsPerPage)) | filter:{bothTeams:searchmatch}">
+    <td>
       <img src="https://footballbet.com.ua/teams/country/{{match.image}}"/>
-      {{ match.firstTeam + '-' + match.secondTeam }}
-    </li>
-  </ul>
+      {{ match.bothTeams }}
+    </td>
+  </table>
 
   <pagination ng-hide="mctrl.totalItems <= 10" total-items="mctrl.totalItems" ng-model="mctrl.currentPage" first-text = "<<" last-text=">>" previous-text="<" next-text=">" max-size="mctrl.maxSize" class="pagination-sm" boundary-links="false" rotate="false" items-per-page="mctrl.itemsPerPage"></pagination>
 
