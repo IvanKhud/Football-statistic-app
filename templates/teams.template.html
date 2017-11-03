@@ -1,12 +1,13 @@
-<div ng-controller="TeamsCtrl as tctrl">
+<div>
+
   <input type="text" ng-model="searchteam" class="form-control">
-  <table class="table table-bordered" ng-repeat="team in tctrl.teams.slice(((tctrl.currentPage-1)*tctrl.itemsPerPage), ((tctrl.currentPage)*tctrl.itemsPerPage)) | filter:{name:searchteam}">
+  <table class="table table-bordered" ng-repeat="team in data.teams.slice(((currentPage-1)*10), ((currentPage)*10)) | filter:{name:searchteam}">
     <td>
       <img src="https://footballbet.com.ua/teams/embl/{{team.emblema}}"/>
       {{ team.name }}
     </td>
   </table>
 
-  <pagination ng-hide="tctrl.totalItems <= 10" total-items="tctrl.totalItems" ng-model="tctrl.currentPage" first-text = "<<" last-text=">>" previous-text="<" next-text=">" max-size="tctrl.maxSize" class="pagination-sm" boundary-links="true" rotate="false" items-per-page="tctrl.itemsPerPage"></pagination>
+  <pagination total-items="totalItems" ng-model="currentPage" first-text = "<<" last-text=">>" previous-text="<" next-text=">" max-size="5" class="pagination-sm" boundary-links="true" rotate="false" items-per-page="10"></pagination>
 
 </div>

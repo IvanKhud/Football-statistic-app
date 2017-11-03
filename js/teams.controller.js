@@ -1,14 +1,9 @@
-app.controller('TeamsCtrl', function($http){
-  var arr = this;
-  $http.get("https://footballbet.com.ua/api/teams/")
-  .then(function(response) {
-       arr.teams = response.data.result;
-       arr.totalItems = arr.teams.length;
-  });
+app.controller('teamsCtrl', ['$scope', 'dataFactory', function ($scope, Data) {
 
-  arr.viewby = 10;
-  arr.currentPage = 4;
-  arr.itemsPerPage = arr.viewby;
-  arr.maxSize = 5;
+  $scope.data = Data;
+  $scope.data.getTeams();
 
-});
+  $scope.currentPage = 1;
+  $scope.totalItems = $scope.data.teams.length;
+
+}]);

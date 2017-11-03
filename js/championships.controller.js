@@ -1,14 +1,9 @@
-app.controller('ChampionshipsCtrl', function($http){
-  var arr = this;
-      $http.get("https://footballbet.com.ua/api/championships/")
-  .then(function(response) {
-       arr.championships = response.data.result;
-       arr.totalItems = arr.championships.length;
-   });
+app.controller('championshipsCtrl', ['$scope', 'dataFactory', function ($scope, Data) {
 
-  arr.viewby = 10;
-  arr.currentPage = 4;
-  arr.itemsPerPage = arr.viewby;
-  arr.maxSize = 5;
+  $scope.data = Data;
+  $scope.data.getChampionships();
 
-});
+  $scope.currentPage = 1;
+  $scope.totalItems = $scope.data.championships.length;
+
+}]);
