@@ -4,6 +4,5 @@ app.controller('championshipsCtrl', ['$scope', 'dataFactory', function ($scope, 
   $scope.data.getChampionships();
 
   $scope.currentPage = 1;
-  $scope.totalItems = $scope.data.championships.length;
 
 }]);
