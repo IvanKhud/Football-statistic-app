@@ -1,6 +1,6 @@
 <div>
 
-  <input type="text" ng-model="searchteam" class="form-control">
+  <input type="text" ng-hide="data.loading" ng-model="searchteam" class="form-control">
   <img src="img/loading_spinner.gif" ng-show="data.loading" id="spinner">
   <table ng-hide="data.loading" class="table table-bordered" ng-repeat="team in data.teams.slice(((currentPage-1)*10), ((currentPage)*10)) | filter:{name:searchteam}">
     <td>

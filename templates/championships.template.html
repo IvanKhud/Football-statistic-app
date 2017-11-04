@@ -1,7 +1,7 @@
 <div>
-  <input type="text" ng-model="searchchamp" class="form-control">
+  <input type="text" ng-model="searchchamp" ng-hide="data.loading" class="form-control">
   <img src="img/loading_spinner.gif" ng-show="data.loading" id="spinner">
-  <table ng-show="!data.loading" class="table table-bordered" ng-repeat="championship in data.championships.slice((currentPage-1)*10, currentPage*10) | filter:{name:searchchamp}">
+  <table ng-hide="data.loading" class="table table-bordered" ng-repeat="championship in data.championships.slice((currentPage-1)*10, currentPage*10) | filter:{name:searchchamp}">
     <td>
       <img src="https://footballbet.com.ua/table/embl/{{championship.image}}"/>
       <a href="#!championships/{{championship.id_championship}}">{{championship.name}}</span></a>
