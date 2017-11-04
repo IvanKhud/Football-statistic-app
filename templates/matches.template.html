@@ -1,6 +1,7 @@
 <div>
 	
   <input type="text" ng-model="searchmatch" class="form-control">
+  <img src="img/loading_spinner.gif" ng-show="data.loading" id="spinner">
   <table class="table table-bordered" ng-repeat="match in data.matches.slice((currentPage-1)*10, currentPage*10) | filter:{bothTeams:searchmatch}">
     <td>
       <img src="https://footballbet.com.ua/teams/country/{{match.image}}"/>

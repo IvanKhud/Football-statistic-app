@@ -45,3 +45,10 @@
   padding-top: 0;
   padding-bottom: 0;
 }
+
+#spinner {
+  position: absolute;
+  margin: auto;
+  height: 75px;
+  width: 75px;
+}
