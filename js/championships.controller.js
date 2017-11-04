@@ -2,7 +2,6 @@ app.controller('championshipsCtrl', ['$scope', 'dataFactory', function ($scope, 
 
   $scope.data = Data;
   $scope.data.getChampionships();
-
   $scope.currentPage = 1;
 
 }]);
