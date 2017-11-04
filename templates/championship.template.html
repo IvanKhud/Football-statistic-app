@@ -1,0 +1,7 @@
+<div class="container">
+  <img id="fullLogo" src="https://footballbet.com.ua/table/embl/{{data.championships[idchamp - 1].title}}.jpg" />
+  <p>ID турніру: {{idchamp}}</p>
+  <p>Чемпіонат: {{data.championships[idchamp - 1].name}}</p>
+  <p ng-if="data.championships[idchamp - 1].sename">
+    Назва чемпіонату: {{data.championships[idchamp - 1].sename}}</p>
+</div>

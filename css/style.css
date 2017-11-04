@@ -55,3 +55,8 @@
 .active {
   background-color: #eee;
 }
+
+#fullLogo {
+  width: 200px; 
+  height: auto;
+}
