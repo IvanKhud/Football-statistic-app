@@ -1,6 +1,7 @@
 app.factory('dataFactory', ['$http', function($http) {
 
     var Data = {};
+    Data.loading = true;
 
     Data.getChampionships = function () {
       Data.loading = true;
@@ -8,9 +9,10 @@ app.factory('dataFactory', ['$http', function($http) {
         $http.get("https://footballbet.com.ua/api/championships/")
         .then(function(response) {
           Data.championships = response.data.result;
+          Data.loading = false;
         });
       }
-      Data.loading = false;
+      
     };
     
     Data.getTeams = function () {
@@ -19,9 +21,9 @@ app.factory('dataFactory', ['$http', function($http) {
         $http.get("https://footballbet.com.ua/api/teams/")
         .then(function(response) {
           Data.teams = response.data.result;
+          Data.loading = false;
         });
       };
-      Data.loading = false;
     };
     
     Data.getMatches = function () {
@@ -34,9 +36,9 @@ app.factory('dataFactory', ['$http', function($http) {
           Data.matches[i].bothTeams = 
           Data.matches[i].firstTeam.concat(" - ", Data.matches[i].secondTeam);    
           }
+          Data.loading = false;
         });
       };
-      Data.loading = false;
     };
 
     return Data;

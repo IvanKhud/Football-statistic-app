@@ -2,13 +2,13 @@
 
   <input type="text" ng-model="searchteam" class="form-control">
   <img src="img/loading_spinner.gif" ng-show="data.loading" id="spinner">
-  <table class="table table-bordered" ng-repeat="team in data.teams.slice(((currentPage-1)*10), ((currentPage)*10)) | filter:{name:searchteam}">
+  <table ng-hide="data.loading" class="table table-bordered" ng-repeat="team in data.teams.slice(((currentPage-1)*10), ((currentPage)*10)) | filter:{name:searchteam}">
     <td>
       <img src="https://footballbet.com.ua/teams/embl/{{team.emblema}}"/>
-      {{ team.name }}
+      <a href="#!teams/{{team.id_teams}}">{{team.name}}</a>
     </td>
   </table>
 
-  <pagination ng-hide="data.teams.length <= 10" total-items="data.teams.length" ng-model="currentPage" first-text = "<<" last-text=">>" previous-text="<" next-text=">" max-size="5" class="pagination-sm" boundary-links="data.teams.length > 30" rotate="false" items-per-page="10"></pagination>
+  <pagination ng-hide="data.teams.length <= 10 || data.loading" total-items="data.teams.length" ng-model="currentPage" first-text = "<<" last-text=">>" previous-text="<" next-text=">" max-size="5" class="pagination-sm" boundary-links="data.teams.length > 30" rotate="false" items-per-page="10"></pagination>
 
 </div>
