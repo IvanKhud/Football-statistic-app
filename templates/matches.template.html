@@ -1,12 +1,18 @@
 <div>
 	
-  <input type="text" ng-model="searchmatch" ng-hide="data.loading" class="form-control">
   <img src="img/loading_spinner.gif" ng-show="data.loading" id="spinner">
-  <table ng-hide="data.loading" class="table table-bordered" ng-repeat="match in data.matches.slice((currentPage-1)*10, currentPage*10) | filter:{bothTeams:searchmatch}">
-    <td>
-      <img src="https://footballbet.com.ua/teams/country/{{match.image}}"/>
-      <td><a href="#!matches/{{$index}}">{{match.bothTeams}}</a></td>
-    </td>
+  <table ng-hide="data.loading" class="table table-bordered">
+    <th>
+      <span ng-hide="searchEnabled">Championships<i class="glyphicon glyphicon-search" ng-show="!searchEnabled" ng-click="searchEnabled = true"></i></span>
+      <span ng-hide="!searchEnabled"><input type="text" placeholder="Search" ng-model="searchmatch" class="form-control"><i class="glyphicon glyphicon-remove" ng-show="searchEnabled" ng-click="searchEnabled = false"></i></span>
+    </th>
+
+    <tr ng-repeat="match in data.matches.slice((currentPage-1)*10, currentPage*10) | filter:{bothTeams:searchmatch}">
+      <td>
+        <img src="https://footballbet.com.ua/teams/country/{{match.image}}"/>
+        <a href="#!matches/{{$index}}">{{match.bothTeams}}</a>
+      </td>
+    </tr>
   </table>
 
   <pagination ng-hide="data.matches.length <= 10 || data.loading" total-items="data.matches.length" ng-model="currentPage" first-text = "<<" last-text=">>" previous-text="<" next-text=">" max-size="5" class="pagination-sm" boundary-links="data.matches.length > 30" rotate="false" items-per-page="10"></pagination>
