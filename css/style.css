@@ -69,3 +69,11 @@
   text-align: center;
   background-color: white;
 }
+
+#searchIcon:hover {
+  cursor: pointer;
+}
+
+.glyphicon-remove {
+  cursor: pointer;
+}
