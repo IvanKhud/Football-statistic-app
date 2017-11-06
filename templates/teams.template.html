@@ -3,8 +3,10 @@
   <img src="img/loading_spinner.gif" ng-show="data.loading" id="spinner">
   <table ng-hide="data.loading" class="table table-bordered">
   	<th>
-  	  <span ng-hide="searchEnabled">Championships<i class="glyphicon glyphicon-search" ng-show="!searchEnabled" ng-click="searchEnabled = true"></i></span>
-      <span ng-hide="!searchEnabled"><input type="text" placeholder="Search" ng-model="searchteam" class="form-control"><i class="glyphicon glyphicon-remove" ng-show="searchEnabled" ng-click="searchEnabled = false"></i></span>
+  	  <p ng-hide="searchEnabled">Championships<i class="glyphicon glyphicon-search" id="searchIcon" ng-show="!searchEnabled" ng-click="searchEnabled = true"></i></p>
+      <div class="input-group" ng-hide="!searchEnabled">
+        <input type="text" placeholder="Search" ng-model="searchteam" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-remove" ng-show="searchEnabled" ng-click="searchEnabled = false"></i></span>
+      </div>
     </th>
 
     <tr ng-repeat="team in data.teams.slice(((currentPage-1)*10), ((currentPage)*10)) | filter:{name:searchteam}">

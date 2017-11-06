@@ -61,8 +61,11 @@
   height: auto;
 }
 
-.input-group {
-  text-align: center;
+#searchIcon {
+  float:right;
 }
 
- 
+.table td, th {
+  text-align: center;
+  background-color: white;
+}
