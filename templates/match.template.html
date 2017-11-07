@@ -1,3 +1,21 @@
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Date</th>
+      <th>Championship</th>
+      <th>Match</th>
+    </tr>
+  </thead>  	
+  <tbody>
+  	<tr>
+  	  <td>
+        {{data.matches[idmatch].date}}
+  	  </td>
+  	  <td>
+        <a href="#!championships/{{data.matches[idmatch].id_championship}}">
+        {{data.matches[idmatch].title}}
+  	  </td>	
+  	  <td>	
         <a href="#!teams/{{data.matches[idmatch].idFirstTeam}}">
           {{data.matches[idmatch].firstTeam}} 
         </a>
@@ -5,3 +23,7 @@
         <a href="#!teams/{{data.matches[idmatch].idSecondTeam}}">
           {{data.matches[idmatch].secondTeam}}
         </a>
+      </td>
+    </tr>
+   </tbody>
+</table>
