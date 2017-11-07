@@ -5,7 +5,7 @@
     <th>
       <p ng-hide="searchEnabled">Championships<i class="glyphicon glyphicon-search" id="searchIcon" ng-show="!searchEnabled" ng-click="searchEnabled = true"></i></p>
       <div class="input-group" ng-hide="!searchEnabled">
-        <input type="text" placeholder="Search" ng-model="searchmatch" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-remove" ng-show="searchEnabled" ng-click="searchEnabled = false"></i></span>
+        <input type="text" placeholder="Search" ng-model="searchmatch" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-remove" ng-show="searchEnabled" ng-click="searchEnabled = false; searchmatch = ''"></i></span>
       </div>
     </th>
 
