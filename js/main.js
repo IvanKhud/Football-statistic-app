@@ -7,24 +7,24 @@ app.config(function($routeProvider) {
       templateUrl: 'templates/championships.template.html'
     })
     .when('/championships/:idchamp', {
-    templateUrl:'templates/championship.template.html',
-    controller:'championshipCtrl'
+      controller:'championshipCtrl',
+      templateUrl:'templates/championship.template.html'
     })
     .when("/teams", {
       controller: 'teamsCtrl',
       templateUrl: 'templates/teams.template.html'
     })
     .when('/teams/:idteam', {
-      templateUrl:'templates/team.template.html',
-      controller:'teamCtrl'
+      controller:'teamCtrl',
+      templateUrl:'templates/team.template.html'
     })
     .when("/matches", {
       controller: 'matchesCtrl',
       templateUrl: 'templates/matches.template.html'
     })
     .when("/matches/:idmatch", {
-      templateUrl:'templates/match.template.html',
-      controller:'matchCtrl'
+      controller:'matchCtrl',
+      templateUrl:'templates/match.template.html'
     })
     .when("/about", {
       templateUrl: 'templates/about.template.html'

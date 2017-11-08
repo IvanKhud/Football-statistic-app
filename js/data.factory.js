@@ -1,13 +1,7 @@
 app.factory('dataFactory', ['$http', function($http) {
 
-    var Data = {};
-
-    Data.getTeamId = function(idteam) {
-      for (var i in Data.teams) {
-        if (Data.teams[i].id_teams == idteam) {
-        return i;
-        }
-      }
+    var Data = {
+      indexArr: []
     };
 
     Data.getChampionships = function () {
@@ -18,8 +12,7 @@ app.factory('dataFactory', ['$http', function($http) {
           Data.championships = response.data.result;
           Data.loading = false;
         });
-      }
-      
+      };
     };
     
     Data.getTeams = function () {
@@ -28,6 +21,9 @@ app.factory('dataFactory', ['$http', function($http) {
         $http.get("https://footballbet.com.ua/api/teams/")
         .then(function(response) {
           Data.teams = response.data.result;
+          for (var i =0; i < Data.teams.length; i++) {
+            Data.indexArr[Data.teams[i].id_teams] = i;
+          }
           Data.loading = false;
         });
       };
