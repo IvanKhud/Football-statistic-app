@@ -3,7 +3,7 @@
   <img src="img/loading_spinner.gif" ng-show="data.loading" id="spinner">
   <table ng-hide="data.loading" class="table table-bordered">
     <th>
-      <p ng-hide="searchEnabled">Championships<i class="glyphicon glyphicon-search" id="searchIcon" ng-show="!searchEnabled" ng-click="searchEnabled = true"></i></p>
+      <p ng-hide="searchEnabled">Matches<i class="glyphicon glyphicon-search" id="searchIcon" ng-show="!searchEnabled" ng-click="searchEnabled = true"></i></p>
       <div class="input-group" ng-hide="!searchEnabled">
         <input type="text" placeholder="Search" ng-model="searchmatch" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-remove" ng-show="searchEnabled" ng-click="searchEnabled = false; searchmatch = ''"></i></span>
       </div>
