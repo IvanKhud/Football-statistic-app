@@ -2,6 +2,14 @@ app.factory('dataFactory', ['$http', function($http) {
 
     var Data = {};
 
+    Data.getTeamId = function(idteam) {
+      for (var i in Data.teams) {
+        if (Data.teams[i].id_teams == idteam) {
+        return i;
+        }
+      }
+    };
+
     Data.getChampionships = function () {
       if (Data.championships === undefined){
         Data.loading = true;
