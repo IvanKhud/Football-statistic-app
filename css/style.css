@@ -3,47 +3,66 @@
   margin: 0;
 }
 
-.container-fluid, .container {
-	background-color: #f7f7f9;
-	border: solid rgba(0, 0, 0, 0.07);
-  border-width: 1px;
-  border-radius: 5px;
-}
-
-.mainContainer {
-  width: 70%;
-}
-
-.table, .form-control {
-  width: 35%;
-  margin: auto;
-}
-
 .navbar-nav {
-  margin-top: 20px;
-  margin-left: 15%;
+  margin-left: 10%;  
 }
 
 .navbar-nav img {
+  height: 46px;
+  margin: 2px;
   margin-right: 20px;
-  margin-left: 20%;
-  height: 50px;
-  width: 50px;
-}
+} 
 
 .navbar-nav li {
   font-size: 16px;
 }
 
-.table img {
-  height: 35px;
-  width: 35px;
+.navbar-nav a {
+  float: left;
 }
 
-#spinner {
+.header {
+  height: 60px;
+}
+
+.mainContainer {
+  border: 1px solid rgb(230, 230, 230);
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-left: 10%;
+  width: 80%;
+  padding: 5px;
+  padding-top: 22px;
+  background-color: rgb(251, 251, 251);
+  min-height: 120px;
+}
+
+.table {
+  background-color: white;
   margin: auto;
-  height: 75px;
-  width: 75px;
+  text-align: center;
+  width: 30%; 
+}
+
+table img {
+  height: 35px;
+}
+
+th {
+  text-align: center;
+}
+
+tr { 
+  line-height: 37px;
+}
+
+td {
+  padding-left: 10px;
+  padding-right: 10px; 
+}
+
+th, td {
+  border: 1px solid rgb(230, 230, 230);
 }
 
 .active {
@@ -54,11 +73,6 @@
   float:right;
 }
 
-.table td, th {
-  text-align: center;
-  background-color: white;
-}
-
 #searchIcon:hover {
   cursor: pointer;
 }
@@ -67,11 +81,12 @@
   cursor: pointer;
 }
 
-#championshipLogo {
-  width: 140px;
-  height: auto;
+.pagination-centered {
+  text-align: center;
 }
 
-.pagination-centered {
-    text-align: center;
+#spinner {
+  margin: auto;
+  height: 75px;
+  width: 75px;
 }
