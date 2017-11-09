@@ -18,6 +18,10 @@
   height: 60px;
 }
 
+.navbar-nav li:hover {
+  background-color: #eee;
+}
+
 .navbar-nav a {
   float: left;
 }
