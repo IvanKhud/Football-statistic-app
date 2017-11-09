@@ -4,7 +4,6 @@
 }
 
 .container-fluid, .container {
-	text-align: center;
 	background-color: #f7f7f9;
 	border: solid rgba(0, 0, 0, 0.07);
   border-width: 1px;
@@ -36,14 +35,9 @@
   font-size: 16px;
 }
 
-.container img {
+.table img {
   height: 35px;
   width: 35px;
-}
-
-.list-group-item {
-  padding-top: 0;
-  padding-bottom: 0;
 }
 
 #spinner {
@@ -54,11 +48,6 @@
 
 .active {
   background-color: #eee;
-}
-
-#fullLogo {
-  width: 200px; 
-  height: auto;
 }
 
 #searchIcon {
@@ -76,4 +65,13 @@
 
 .glyphicon-remove {
   cursor: pointer;
+}
+
+#championshipLogo {
+  width: 140px;
+  height: auto;
+}
+
+.pagination-centered {
+    text-align: center;
 }
