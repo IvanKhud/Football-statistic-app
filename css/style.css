@@ -15,6 +15,7 @@
 
 .navbar-nav li {
   font-size: 16px;
+  height: 60px;
 }
 
 .navbar-nav a {
