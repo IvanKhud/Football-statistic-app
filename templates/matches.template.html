@@ -1,15 +1,15 @@
 <div>
 	
-  <img src="img/loading_spinner.gif" ng-show="data.loading" id="spinner">
-  <table ng-hide="data.loading" class="table table-bordered">
+  <img src="img/loading_spinner.gif" ng-show="matchL.data.loading" id="spinner">
+  <table ng-hide="matchL.data.loading" class="table table-bordered">
     <th>
-      <p ng-hide="searchEnabled">Matches<i class="glyphicon glyphicon-search" id="searchIcon" ng-show="!searchEnabled" ng-click="searchEnabled = true"></i></p>
-      <div class="input-group" ng-hide="!searchEnabled">
-        <input type="text" placeholder="Search" ng-model="searchmatch" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-remove" ng-show="searchEnabled" ng-click="searchEnabled = false; searchmatch = ''"></i></span>
+      <p ng-hide="matchL.searchEnabled">Matches<i class="glyphicon glyphicon-search" id="searchIcon" ng-show="!matchL.searchEnabled" ng-click="matchL.searchEnabled = true"></i></p>
+      <div class="input-group" ng-hide="!matchL.searchEnabled">
+        <input type="text" placeholder="Search" ng-model="searchmatch" class="form-control"><span class="input-group-addon"><i class="glyphicon glyphicon-remove" ng-show="matchL.searchEnabled" ng-click="matchL.searchEnabled = false; searchmatch = ''"></i></span>
       </div>
     </th>
 
-    <tr ng-repeat="match in (data.matches | filter:{bothTeams:searchmatch}).slice((currentPage-1)*10, currentPage*10)">
+    <tr ng-repeat="match in (matchL.data.matches | filter:{bothTeams:searchmatch}).slice((matchL.currentPage-1)*10, matchL.currentPage*10)">
       <td>
         <img src="https://footballbet.com.ua/teams/country/{{match.image}}"/>
         <a href="#!matches/{{$index}}">{{match.bothTeams}}</a>
@@ -18,7 +18,7 @@
   </table>
 
   <div class="pagination-centered">
-    <pagination ng-hide="(data.matches | filter:{bothTeams:searchmatch}).length <= 10 || data.loading" total-items="(data.matches | filter:{bothTeams:searchmatch}).length" ng-model="currentPage" first-text = "<<" last-text=">>" previous-text="<" next-text=">" max-size="5" class="pagination-sm" boundary-links="data.matches.length > 30" rotate="false" items-per-page="10"></pagination>
+    <pagination ng-hide="(matchL.data.matches | filter:{bothTeams:searchmatch}).length <= 10 || matchL.data.loading" total-items="(matchL.data.matches | filter:{bothTeams:searchmatch}).length" ng-model="matchL.currentPage" first-text = "<<" last-text=">>" previous-text="<" next-text=">" max-size="5" class="pagination-sm" boundary-links="matchL.data.matches.length > 30" rotate="false" items-per-page="10"></pagination>
   </div>
   
 </div>

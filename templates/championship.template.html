@@ -1,7 +1,7 @@
 <div class="details">
-  <img id="championshipLogo" src="https://footballbet.com.ua/table/embl/{{data.championships[idchamp - 1].title}}.jpg" />
-  <p><strong>ID турніру: </strong>{{idchamp}}</p>
-  <p><strong>Чемпіонат: </strong>{{data.championships[idchamp - 1].name}}</p>
-  <p ng-if="data.championships[idchamp - 1].sename">
-    <strong>Назва чемпіонату: </strong>{{data.championships[idchamp - 1].sename}}</p>
+  <img id="championshipLogo" src="https://footballbet.com.ua/table/embl/{{champD.data.championships[champD.idchamp - 1].title}}.jpg" />
+  <p><strong>ID турніру: </strong>{{champD.idchamp}}</p>
+  <p><strong>Чемпіонат: </strong>{{champD.data.championships[champD.idchamp - 1].name}}</p>
+  <p ng-if="champD.data.championships[champD.idchamp - 1].sename">
+    <strong>Назва чемпіонату: </strong>{{champD.data.championships[champD.idchamp - 1].sename}}</p>
 </div>
