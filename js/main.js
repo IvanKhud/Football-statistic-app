@@ -32,4 +32,4 @@ app.config(function($routeProvider) {
     .otherwise({
       redirectTo: '/championships'
     });
- });
+});
