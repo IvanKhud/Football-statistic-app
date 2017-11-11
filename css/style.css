@@ -33,7 +33,7 @@
   background-color: rgb(251, 251, 251);
 }
 
-.mainContainer {
+.main-container {
   border: 1px solid rgb(230, 230, 230);
   border-radius: 5px;
   margin-top: 5px;
@@ -69,7 +69,8 @@ td {
   padding-right: 10px; 
 }
 
-th, td {
+th, 
+td {
   border: 1px solid rgb(230, 230, 230);
 }
 
@@ -77,11 +78,11 @@ th, td {
   background-color: #eee;
 }
 
-#searchIcon {
+#search-icon {
   float:right;
 }
 
-#searchIcon:hover {
+#search-icon:hover {
   cursor: pointer;
 }
 
