@@ -9,19 +9,19 @@
   <tbody>
   	<tr>
   	  <td>
-        {{matchD.data.matches[matchD.idmatch].date}}
+        {{data.matches[idmatch].date}}
   	  </td>
   	  <td>
-        <a href="#!championships/{{matchD.data.matches[matchD.idmatch].id_championship}}">
-        {{matchD.data.matches[matchD.idmatch].title}}
+        <a href="#!championships/{{data.matches[idmatch].id_championship}}">
+        {{data.matches[idmatch].title}}
   	  </td>	
   	  <td>	
-        <a href="#!teams/{{matchD.data.matches[matchD.idmatch].idFirstTeam}}">
-          {{matchD.data.matches[matchD.idmatch].firstTeam}} 
+        <a href="#!teams/{{data.matches[idmatch].idFirstTeam}}">
+          {{data.matches[idmatch].firstTeam}} 
         </a>
-        {{matchD.data.matches[matchD.idmatch].firstTeamGoal}}:{{matchD.data.matches[matchD.idmatch].secondTeamGoal}} 
-        <a href="#!teams/{{matchD.data.matches[matchD.idmatch].idSecondTeam}}">
-          {{matchD.data.matches[matchD.idmatch].secondTeam}}
+        {{data.matches[idmatch].firstTeamGoal}}:{{data.matches[idmatch].secondTeamGoal}} 
+        <a href="#!teams/{{data.matches[idmatch].idSecondTeam}}">
+          {{data.matches[idmatch].secondTeam}}
         </a>
       </td>
     </tr>

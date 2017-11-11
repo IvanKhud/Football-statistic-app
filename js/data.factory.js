@@ -1,4 +1,4 @@
-angular.module('mainApp').factory('dataFactory', ['$http', function($http) {
+app.factory('dataFactory', ['$http', function($http) {
 
     var Data = {
       indexArr: []
@@ -12,7 +12,7 @@ angular.module('mainApp').factory('dataFactory', ['$http', function($http) {
           Data.championships = response.data.result;
           Data.loading = false;
         });
-      }
+      };
     };
     
     Data.getTeams = function () {
@@ -26,7 +26,7 @@ angular.module('mainApp').factory('dataFactory', ['$http', function($http) {
           }
           Data.loading = false;
         });
-      }
+      };
     };
     
     Data.getMatches = function () {
@@ -42,10 +42,10 @@ angular.module('mainApp').factory('dataFactory', ['$http', function($http) {
                 Data.matches[i].id_championship = Data.championships[j].id_championship;
               }          
             }
-          }
+          };
           Data.loading = false;
         });
-      }
+      };
     };
 
     return Data;
