@@ -3,28 +3,28 @@ var app = angular.module('mainApp', ["ngRoute", "ngSanitize", "ui.bootstrap"]);
 app.config(function($routeProvider) {
   $routeProvider
     .when("/championships", {
-      controller: 'championshipsCtrl',
-      templateUrl: 'templates/championships.template.html'
+      templateUrl: 'templates/championships.template.html',
+      controller: 'championshipsCtrl'
     })
     .when('/championships/:idchamp', {
-      controller:'championshipCtrl',
-      templateUrl:'templates/championship.template.html'
+      templateUrl:'templates/championship.template.html',
+      controller:'championshipCtrl'
     })
     .when("/teams", {
-      controller: 'teamsCtrl',
-      templateUrl: 'templates/teams.template.html'
+      templateUrl: 'templates/teams.template.html',
+      controller: 'teamsCtrl'
     })
     .when('/teams/:idteam', {
-      controller:'teamCtrl',
-      templateUrl:'templates/team.template.html'
+      templateUrl:'templates/team.template.html',
+      controller:'teamCtrl'
     })
     .when("/matches", {
-      controller: 'matchesCtrl',
-      templateUrl: 'templates/matches.template.html'
+      templateUrl: 'templates/matches.template.html',
+      controller: 'matchesCtrl'
     })
     .when("/matches/:idmatch", {
-      controller:'matchCtrl',
-      templateUrl:'templates/match.template.html'
+      templateUrl:'templates/match.template.html',
+      controller:'matchCtrl'
     })
     .when("/about", {
       templateUrl: 'templates/about.template.html'
