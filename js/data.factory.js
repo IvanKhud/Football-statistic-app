@@ -21,12 +21,6 @@ app.factory('dataFactory', [
 
             for (var i = 0; i < Data.matches.length; i++) {
               Data.matches[i].bothTeams = Data.matches[i].firstTeam.concat(" - ", Data.matches[i].secondTeam);    
-          
-              for (var j = 0; j < Data.championships.length; j++) {
-                if (Data.matches[i].title.indexOf(Data.championships[j].name) >= 0) {
-                  Data.matches[i].id_championship = Data.championships[j].id_championship;
-                }          
-              }
             }
           };
         callback();
