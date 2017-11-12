@@ -20,8 +20,8 @@
 </table>
 
 <div class="pagination-centered">
-  <pagination ng-hide="(data.teams | filter:{name:searchteam}).length <= 10 || data.loading" total-items="(data.teams | filter:{name:searchteam}).length" 
-    ng-model="currentPage" first-text = "<<" last-text=">>" previous-text="<" next-text=">" max-size="5" class="pagination-sm" 
-    boundary-links="data.teams.length > 30" rotate="false" items-per-page="10">
+  <pagination ng-hide="(data.teams | filter:{name:searchteam}).length <= 10 || data.loading" ng-model="currentPage" 
+    total-items="(data.teams | filter:{name:searchteam}).length" first-text = "<<" last-text=">>" previous-text="<" 
+    next-text=">" max-size="5" class="pagination-sm" boundary-links="data.teams.length > 30" rotate="false" items-per-page="10">
   </pagination>
 </div>
