@@ -1,9 +1,11 @@
 app.controller('matchesCtrl', [
   '$scope', 'dataFactory', function ($scope, Data) {
   $scope.data = Data;
-  $scope.data.getMatches();
-  $scope.data.getTeams();
-  $scope.data.getChampionships();
+  $scope.data.getApi("championships", function() {
+    $scope.data.getApi("matches", function() {
+        $scope.data.loading = false;
+    })
+   });
   $scope.currentPage = 1;
   }
 ]);

@@ -5,7 +5,38 @@ app.factory('dataFactory', [
     indexArr: []
   };
 
-  Data.getChampionships = function () {
+  Data.getApi = function(database, callback) {      
+    if (Data[database] === undefined) {
+      Data.loading = true;    
+      $http.get("https://footballbet.com.ua/api/".concat(database, "/"))
+        .then(function(response) {
+          Data[database] = response.data.result;  
+          if (database === "teams") {
+
+            for (var i = 0; i < Data.teams.length; i++) {
+              Data.indexArr[Data.teams[i].id_teams] = i;	
+            }
+          };
+          if (database === "matches") {
+
+            for (var i = 0; i < Data.matches.length; i++) {
+              Data.matches[i].bothTeams = Data.matches[i].firstTeam.concat(" - ", Data.matches[i].secondTeam);    
+          
+              for (var j = 0; j < Data.championships.length; j++) {
+                if (Data.matches[i].title.indexOf(Data.championships[j].name) >= 0) {
+                  Data.matches[i].id_championship = Data.championships[j].id_championship;
+                }          
+              }
+            }
+          };
+        callback();
+        });
+    } else {
+      callback();
+    }
+  };
+
+/*  Data.getChampionships = function () {
     if (Data.championships === undefined){
       Data.loading = true;
       $http.get("https://footballbet.com.ua/api/championships/")
@@ -51,7 +82,7 @@ app.factory('dataFactory', [
       });
     }
   };
-
+*/
   return Data;
 
   }

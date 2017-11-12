@@ -1,8 +1,9 @@
 app.controller('teamsCtrl', [
   '$scope', 'dataFactory', function ($scope, Data) {
   $scope.data = Data;
-  $scope.data.getTeams();
-  $scope.data.getChampionships();
+  $scope.data.getApi("teams", function() {
+    $scope.data.loading = false;
+  });
   $scope.currentPage = 1;
   }
 ]);
